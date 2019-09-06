@@ -1,0 +1,2 @@
+module PostsContollerHelper
+end

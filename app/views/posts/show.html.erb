@@ -1,0 +1,19 @@
+<h1>hello show</h1>
+<%= notice%>
+<p><%= link_to 'go back',posts_path%></p>
+<p>
+<label>id:</label>
+<%= @post.id%>
+<p>
+<label>title:</label>
+<%= @post.title%>
+</p>
+<p>
+<label> content: </label>
+<%= @post.body%>
+<p>
+<%= link_to 'delete',@post,method: :delete ,data: {confirm: "are you want to delete?"}%>
+</p>
+</p>
+<p>
+<%= link_to 'update',edit_post_path(@post)%>

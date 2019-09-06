@@ -1,0 +1,18 @@
+<h1>hello index </h1>
+<%= notice%>
+<p><%= link_to 'add new post',new_post_path%>
+<% @posts.each do |post|%>
+<p>
+   <label> ID:</label>
+   <%= post.id%>\
+</p>
+<h1> 
+   <%= post.title%>
+ </h1>
+<p>
+  <%= post.body%>
+</p>      
+
+<p><%= link_to 'show',post_path(post)%></p>
+
+<% end %>
