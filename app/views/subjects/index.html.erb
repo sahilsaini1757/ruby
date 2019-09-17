@@ -1,0 +1,30 @@
+<%= link_to("+add new subjects",{:action=>'new'})%>
+<table class="listing" summary="subject list" border=5>
+<thead>
+<tr>
+
+<th>title</th>
+
+<th>visible</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<% @subjects.each do |subject| %>
+<tr>
+
+
+<td><%= subject.title%></td>
+<td><%= subject.visible ? "yes": "no" %></td>
+<td>
+<%= link_to('show',{:action=>'show' ,:id=>subject.id})%>
+<%= link_to('edit',{:action=>'edit' ,:id=>subject.id})%>
+<%= link_to('delete',{:action=>'destroy' ,:id=>subject.id},method: :delete,data: {confirm: "you want to delete"})%>
+</td>
+
+</td>
+</tr>
+<% end %>
+</tbody>
+</table>

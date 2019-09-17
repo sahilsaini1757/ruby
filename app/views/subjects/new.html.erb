@@ -1,0 +1,19 @@
+<h1>new</h1>
+<%# form_for(:subject, :url=>{:action=>"create"}) do |f|%>
+<%= form_for(@subject) do |f|%>
+<table>
+<tr>
+<th>title</th>
+<td><%= f.text_field(:title) %></td>
+</tr>
+<tr>
+<th> contents</th>
+<td><%= f.text_area(:content)%></td>
+</tr>
+<tr>
+<th>visiblity </th>
+<td><%= f.text_field(:visible)%></td>
+</tr>
+</table>
+<%= f.submit%>
+<%end%>

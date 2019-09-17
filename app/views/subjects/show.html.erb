@@ -1,0 +1,26 @@
+<%= link_to('<<back',{:action=>'index'})   %>
+<table>
+<tr>
+<th>title</th>
+<td><%= @subject.title %>
+</tr>
+
+<tr>
+<th>content</th>
+<td><%= @subject.content%>
+</tr>
+
+<tr>
+<th>visible</th>
+<td><%= @subject.visible ? "yes" : "no" %> </td>
+</tr>
+<tr>
+<th>created_at</th>
+<td><%= @subject.created_at %></td>
+</tr>
+<tr>
+<th>update_at</th>
+<td><%= @subject.updated_at%></td>
+</tr>
+
+</table>
